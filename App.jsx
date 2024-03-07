@@ -1,14 +1,16 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import {Provider} from 'react-redux';
-import store from './componnets/store';
-import TodoApp from './componnets/TodoApp';
 
 const App = () => {
   return (
-    <Provider store={store}>
-      <TodoApp />
-    </Provider>
+    <View className=" mt-8 px-2 h-full w-full flex flex-col justify-center items-center bg-yellow-400">
+      <Text className="font-sans text-3xl text-red-800">
+        native wind working
+      </Text>
+      <Text className="font-sans text-3xl text-red-800">
+        native wind working 
+      </Text>
+    </View>
   );
 };
 
