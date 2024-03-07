@@ -1,20 +1,14 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import Home from './componnets/Home';
-import Details from './componnets/Details';
-
-const Stack = createNativeStackNavigator();
+import {Provider} from 'react-redux';
+import store from './componnets/store';
+import TodoApp from './componnets/TodoApp';
 
 const App = () => {
   return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="Details" component={Details} options />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <Provider store={store}>
+      <TodoApp />
+    </Provider>
   );
 };
 
